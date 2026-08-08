@@ -1,0 +1,19 @@
+{
+  "name": "NEXA360 — Estratégia, Tecnologia e Valor Humano",
+  "short_name": "NEXA360",
+  "description": "Website institucional da NEXA360: diagnóstico empresarial, estratégia, processos, tecnologia e crescimento para PME.",
+  "lang": "pt-PT",
+  "dir": "ltr",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07192e",
+  "theme_color": "#0b2c4b",
+  "icons": [
+    {
+      "src": "brand/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

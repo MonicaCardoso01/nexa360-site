@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="methodLine" x1="100" y1="170" x2="1530" y2="830" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#347FE8" stop-opacity="0.12"/>
+      <stop offset="0.45" stop-color="#347FE8" stop-opacity="0.5"/>
+      <stop offset="0.75" stop-color="#21B979" stop-opacity="0.48"/>
+      <stop offset="1" stop-color="#21B979" stop-opacity="0.08"/>
+    </linearGradient>
+    <radialGradient id="methodGlow" cx="0" cy="0" r="1" gradientTransform="translate(1240 410) rotate(90) scale(420 540)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8FFFC8" stop-opacity="0.28"/>
+      <stop offset="0.5" stop-color="#77C8FF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#77C8FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="1240" cy="410" rx="540" ry="420" fill="url(#methodGlow)"/>
+  <circle cx="410" cy="520" r="300" stroke="#347FE8" stroke-opacity="0.24"/>
+  <circle cx="410" cy="520" r="220" stroke="#21B979" stroke-opacity="0.22" stroke-dasharray="8 18"/>
+  <circle cx="410" cy="520" r="140" stroke="#347FE8" stroke-opacity="0.18"/>
+  <path d="M110 720C340 490 552 410 780 478C1000 544 1188 752 1510 620" stroke="url(#methodLine)" stroke-width="2.4"/>
+  <path d="M170 320C430 190 645 266 830 380C1032 505 1252 502 1490 296" stroke="url(#methodLine)" stroke-width="1.5" stroke-dasharray="7 13"/>
+  <path d="M720 840C882 690 960 530 1120 444C1242 378 1370 378 1515 420" stroke="#21B979" stroke-opacity="0.26" stroke-width="1.3"/>
+  <g stroke-width="2" fill="#F8FBFD">
+    <circle cx="218" cy="638" r="11" stroke="#347FE8"/>
+    <circle cx="560" cy="442" r="10" stroke="#21B979"/>
+    <circle cx="780" cy="478" r="12" stroke="#347FE8"/>
+    <circle cx="1005" cy="615" r="9" stroke="#21B979"/>
+    <circle cx="1250" cy="696" r="12" stroke="#347FE8"/>
+    <circle cx="1450" cy="638" r="8" stroke="#21B979"/>
+  </g>
+  <path d="M1120 155a255 255 0 0 1 280 277" stroke="#347FE8" stroke-opacity="0.2" stroke-width="2" stroke-dasharray="12 17"/>
+  <path d="M1398 432a255 255 0 0 1-262 250" stroke="#21B979" stroke-opacity="0.22" stroke-width="2"/>
+  <circle cx="1260" cy="420" r="330" stroke="#102D46" stroke-opacity="0.06"/>
+</svg>

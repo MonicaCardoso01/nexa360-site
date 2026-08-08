@@ -1,0 +1,28 @@
+# NEXA360 Website — versão 1.4.2
+
+Revisão técnica pré-publicação do posicionamento estratégico e do Programa Empresas Fundadoras.
+
+- Posicionamento direto para micro, pequenas e médias empresas.
+- Diagnóstico Empresarial 360° apresentado como serviço principal.
+- Oferta organizada em três áreas complementares.
+- Entregáveis, prazo e plano de 90 dias explicitados.
+- Programa Empresas Fundadoras com 3 vagas, condição de 650 € + IVA e prazo de 15 dias úteis.
+- CRM identificado com transparência como demonstração pública funcional com dados fictícios.
+- Formulário identificado como demonstração até existir integração segura com o CRM privado.
+- Estatuto pré-operacional explicado com transparência: projeto sob responsabilidade de Mônica Cardoso, com abertura oficial prevista para depois de novembro de 2026.
+- Candidaturas substituídas por manifestações de interesse até à abertura da atividade, prevista para depois de novembro de 2026.
+- Compromissos de confidencialidade, escopo, evidência e autonomia apresentados antes do contacto.
+- Avisos preliminares de Privacidade, Cookies e Termos acessíveis no rodapé, com referências oficiais.
+- Centro de Conhecimento ampliado para oito artigos completos e multilingues.
+- Conteúdo integral disponível em português, inglês e espanhol.
+- Valores NEXA360 explicados numa interação acessível por clique, toque e teclado.
+- Centro de Conhecimento com oito artigos completos e botão destacado para revelar os artigos 05–08.
+- Manifesto instalável corrigido para a identidade do website institucional.
+- Menu móvel e modais reforçados para navegação por teclado, gestão de foco e leitores de ecrã.
+- HTML revisto com tipos explícitos de botões e campos, relações acessíveis e semântica melhorada.
+- Linguagem pré-operacional alinhada com a abertura oficial da atividade prevista para depois de novembro de 2026.
+- Responsividade e identidade visual NEXA360 preservadas.
+- Nova secção de custo da inércia, com sinais concretos de ineficiência e encaminhamento para o Diagnóstico 360°.
+- Comunicação ética: nenhum prejuízo é presumido e qualquer impacto financeiro depende de dados fornecidos pela própria empresa.
+
+Abra `index.html` no Edge ou Chrome.

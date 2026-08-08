@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071828">
+  <meta name="description" content="Estratégia de alto nível para PME: Diagnóstico Empresarial 360°, processos, CRM, IA, crescimento e internacionalização.">
+  <meta name="keywords" content="NEXA360, estratégia, transformação empresarial, CRM, inteligência artificial, comércio internacional, marketing, PME">
+  <meta property="og:title" content="NEXA360 — O potencial da sua empresa merece transformação">
+  <meta property="og:description" content="Diagnóstico, prioridades claras e execução para transformar decisões de PME em crescimento sustentável.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="brand/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>NEXA360 — Evolução com Valor Humano</title>
+  <!-- Website institucional v1.4.2 — custo da inércia com estimativa responsável -->
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 1.4 4.3L18 9l-4.6 1.7L12 15l-1.4-4.3L6 9l4.6-1.7L12 3ZM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15ZM5 13l.8 2.2L8 16l-2.2.8L5 19l-.8-2.2L2 16l2.2-.8L5 13Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.4 2.9 8.4 7 10 4.1-1.6 7-5.6 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M15 9l5-5M16 4h4v4"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M8 14c-1.2-1-2-2.7-2-4.5A6 6 0 0 1 18 9.5c0 1.8-.8 3.5-2 4.5-.8.7-1 1.4-1 2H9c0-.6-.2-1.3-1-2Z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3 20c0-4 2.7-6 6-6s6 2 6 6M15 15c3 0 5 1.6 5 5"/></symbol>
+    <symbol id="i-handshake" viewBox="0 0 24 24"><path d="m8 12 3 3c1 1 2.5 1 3.5 0l4-4M3 8l5-3 4 2 4-2 5 3M3 8l3 8 3-2M21 8l-3 8-3-2"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3c0 .4.1.8.2 1.2A3.5 3.5 0 0 0 7 15v1a3 3 0 0 0 5 2.2V5.8A3 3 0 0 0 9 4ZM15 4a3 3 0 0 1 3 3c0 .4-.1.8-.2 1.2A3.5 3.5 0 0 1 17 15v1a3 3 0 0 1-5 2.2V5.8A3 3 0 0 1 15 4Z"/><path d="M8 10h4M12 14h4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="m10.7 7.2-4.3 8M13.3 7.2l4.3 8M7.5 18h9"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 4 6 4 9s-1 6-4 9c-3-3-4-6-4-9s1-6 4-9Z"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M14 5c3-2 6-2 7-2 0 1 0 4-2 7l-5 5-5-5 5-5Z"/><path d="M9 10 5 11l-2 4 6-1M14 15l-1 6-4-2 1-4M15 9h.01"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 11a8 8 0 0 1-8 8H6l-4 3 1.2-5A8 8 0 1 1 21 11Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  </svg>
+
+  <div class="site-shell">
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="site-header" id="siteHeader">
+      <button class="brand-button" type="button" data-scroll="inicio" aria-label="NEXA360 — início">
+        <img src="brand/nexa360-site-light.svg" alt="NEXA360">
+      </button>
+
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <button type="button" data-scroll="inicio" class="active">Início</button>
+        <button type="button" data-scroll="sobre">Quem Somos</button>
+        <button type="button" data-scroll="solucoes">Soluções</button>
+        <button type="button" data-scroll="metodo">Método</button>
+        <button type="button" data-scroll="casos">Transformações</button>
+        <button type="button" data-scroll="conhecimento">Conhecimento</button>
+        <button type="button" data-scroll="contacto">Contacto</button>
+      </nav>
+
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="Idioma">
+          <button class="active" type="button" data-lang="pt" title="Português" aria-pressed="true">PT</button>
+          <button type="button" data-lang="en" title="English" aria-pressed="false">EN</button>
+          <button type="button" data-lang="es" title="Español" aria-pressed="false">ES</button>
+        </div>
+        <button class="header-cta" type="button" data-scroll="contacto">Iniciar uma conversa <svg><use href="#i-arrow"/></svg></button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="mobilePanel" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
+      </div>
+    </header>
+
+    <div class="mobile-panel" id="mobilePanel" aria-hidden="true" inert>
+      <button type="button" data-scroll="inicio">Início</button><button type="button" data-scroll="sobre">Quem Somos</button>
+      <button type="button" data-scroll="solucoes">Soluções</button><button type="button" data-scroll="metodo">Método</button>
+      <button type="button" data-scroll="casos">Transformações</button><button type="button" data-scroll="conhecimento">Conhecimento</button>
+      <button type="button" data-scroll="contacto">Contacto</button>
+    </div>
+
+    <main>
+      <section id="inicio" class="hero-section">
+        <div class="hero-grid"></div><div class="hero-glow hero-glow-one"></div><div class="hero-glow hero-glow-two"></div>
+        <div class="container hero-layout">
+          <div class="hero-copy" data-reveal>
+            <div class="eyebrow"><svg><use href="#i-spark"/></svg> Estratégia · Tecnologia · Pessoas</div>
+            <h1>O potencial da sua empresa merece mais do que soluções.<span>Merece transformação.</span></h1>
+            <p>Ajudamos micro, pequenas e médias empresas a diagnosticar problemas, organizar processos e transformar decisões em crescimento sustentável — combinando estratégia, tecnologia e valor humano.</p>
+            <div class="hero-buttons">
+              <button class="button button-primary" type="button" data-scroll="diagnostico">Conhecer o Diagnóstico 360° <svg><use href="#i-arrow"/></svg></button>
+              <button class="button button-ghost" type="button" data-scroll="fundadoras"><svg><use href="#i-message"/></svg> Manifestar interesse</button>
+            </div>
+            <div class="trust-line"><svg><use href="#i-shield"/></svg> Estratégia de alto nível, pensada para a realidade das PME.</div>
+          </div>
+          <div class="hero-stage" data-reveal>
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+            <div class="hero-symbol-wrap"><img src="brand/nexa360-symbol.svg" alt="Símbolo NEXA360"><span class="pulse-dot"></span></div>
+            <button class="floating-card card-strategy" type="button" data-scroll="metodo" aria-label="Ir para o Método NEXA360"><span class="mini-icon"><svg><use href="#i-target"/></svg></span><strong>Visão integrada</strong><small>360°</small></button>
+            <button class="floating-card card-solutions" type="button" data-scroll="solucoes" aria-label="Ir para as Soluções"><span class="mini-icon"><svg><use href="#i-bulb"/></svg></span><strong>Soluções à medida</strong><small>+ impacto</small></button>
+            <button class="floating-card card-people" type="button" data-scroll="sobre" aria-label="Ir para Quem Somos e a filosofia NEXA360"><span class="mini-icon"><svg><use href="#i-users"/></svg></span><strong>Valor humano</strong><small>sempre</small></button>
+          </div>
+        </div>
+        <div class="hero-bottom container"><span>NEXA360</span><div></div><span>DIAGNÓSTICO</span><span>ESTRATÉGIA</span><span>INOVAÇÃO</span><span>CRESCIMENTO</span></div>
+      </section>
+
+      <section class="fit-section" aria-labelledby="fit-title">
+        <div class="container fit-layout">
+          <div class="fit-copy" data-reveal>
+            <span class="section-kicker">Para quem foi pensada</span>
+            <h2 id="fit-title">A dimensão da empresa não limita a dimensão do seu potencial.</h2>
+            <p>O nosso foco são micro, pequenas e médias empresas que precisam de transformar informação dispersa, desafios operacionais ou ambição de crescimento em prioridades claras e decisões executáveis.</p>
+          </div>
+          <div class="fit-signals" data-reveal>
+            <div><svg><use href="#i-target"/></svg><span>Falta de clareza sobre prioridades</span></div>
+            <div><svg><use href="#i-network"/></svg><span>Processos comerciais desorganizados</span></div>
+            <div><svg><use href="#i-chart"/></svg><span>Crescimento sem indicadores consistentes</span></div>
+            <div><svg><use href="#i-globe"/></svg><span>Decisões de expansão por validar</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="inercia" class="section inertia-section" aria-labelledby="inertia-title">
+        <div class="container inertia-layout">
+          <div class="inertia-copy" data-reveal>
+            <span class="section-kicker">Custo da inércia</span>
+            <h2 id="inertia-title">Quanto custa à sua empresa adiar decisões importantes?</h2>
+            <p>Processos manuais, oportunidades sem acompanhamento, retrabalho e decisões sem indicadores consomem tempo, margem e capacidade de crescimento.</p>
+            <p class="inertia-lead">O impacto varia em cada empresa. Não presumimos um valor: ajudamos a medi-lo com dados e critérios claros.</p>
+            <button class="button button-primary" type="button" data-scroll="diagnostico">Medir prioridades no Diagnóstico 360° <svg><use href="#i-arrow"/></svg></button>
+          </div>
+          <div class="inertia-signals" data-reveal>
+            <article><svg><use href="#i-bulb"/></svg><span>Tempo absorvido por tarefas repetitivas</span></article>
+            <article><svg><use href="#i-target"/></svg><span>Oportunidades sem acompanhamento consistente</span></article>
+            <article><svg><use href="#i-network"/></svg><span>Retrabalho e erros evitáveis</span></article>
+            <article><svg><use href="#i-chart"/></svg><span>Decisões sem informação consolidada</span></article>
+          </div>
+        </div>
+        <div class="container inertia-ethics" data-reveal>
+          <svg><use href="#i-shield"/></svg>
+          <div><strong>Estimativa responsável</strong><p>Separamos factos, estimativas e hipóteses. Qualquer impacto financeiro é calculado apenas com informação fornecida pela empresa e nunca apresentado como perda comprovada sem evidência.</p></div>
+        </div>
+      </section>
+
+      <section id="sobre" class="section section-light">
+        <div class="photo-atmosphere photo-about" aria-hidden="true"></div>
+        <div class="container about-layout">
+          <div class="section-heading about-heading" data-reveal>
+            <span class="section-kicker">Quem somos</span>
+            <h2>Empresas fortes nascem de decisões inteligentes — e de pessoas valorizadas.</h2>
+            <div class="about-brand-motion" aria-hidden="true">
+              <div class="about-brand-halo halo-one"></div>
+              <div class="about-brand-halo halo-two"></div>
+              <div class="about-brand-core"><img src="brand/nexa360-symbol.svg" alt=""></div>
+              <span class="about-brand-node node-a"></span>
+              <span class="about-brand-node node-b"></span>
+              <span class="about-brand-node node-c"></span>
+            </div>
+          </div>
+          <div class="about-content" data-reveal>
+            <p>A NEXA360 é um projeto empresarial em fase de preparação, desenvolvido sob a responsabilidade de Mônica Cardoso. A abertura oficial da atividade está prevista para depois de novembro de 2026.</p>
+            <p>Mais do que consultoria, a NEXA360 foi concebida para ser uma parceira de evolução. A proposta não se limita a recomendações: integra estratégias, ferramentas, processos e oportunidades para acompanhar a evolução de cada organização.</p>
+            <div class="manifesto-card"><div class="quote-mark">“</div><p>Acreditamos que empresas extraordinárias são construídas por pessoas valorizadas. Por isso, cuidamos das empresas sem nunca deixar de cuidar das pessoas.</p><span>NEXA360 · FILOSOFIA</span></div>
+          </div>
+        </div>
+        <div class="container values-experience" data-reveal>
+          <div class="values-heading">
+            <span class="section-kicker">Princípios NEXA360</span>
+            <h3>Valores que orientam cada decisão</h3>
+            <p>Selecione um valor para conhecer o compromisso que o transforma em prática.</p>
+          </div>
+          <div class="values-strip" role="tablist" aria-label="Valores NEXA360">
+            <button type="button" role="tab" aria-selected="true" aria-controls="value-panel-ethics" id="value-tab-ethics" data-value="ethics" class="active"><svg><use href="#i-shield"/></svg><span>Ética</span></button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="value-panel-proximity" id="value-tab-proximity" data-value="proximity" tabindex="-1"><svg><use href="#i-handshake"/></svg><span>Proximidade</span></button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="value-panel-innovation" id="value-tab-innovation" data-value="innovation" tabindex="-1"><svg><use href="#i-brain"/></svg><span>Inovação</span></button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="value-panel-results" id="value-tab-results" data-value="results" tabindex="-1"><svg><use href="#i-chart"/></svg><span>Resultados</span></button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="value-panel-human" id="value-tab-human" data-value="human" tabindex="-1"><svg><use href="#i-users"/></svg><span>Valor humano</span></button>
+          </div>
+          <div class="value-panel" aria-live="polite">
+            <article id="value-panel-ethics" role="tabpanel" aria-labelledby="value-tab-ethics" data-value-panel="ethics"><div class="value-panel-icon"><svg><use href="#i-shield"/></svg></div><div><h4>Ética</h4><p>Atuamos com transparência, confidencialidade e responsabilidade, sem promessas que não possam ser sustentadas por evidências.</p></div></article>
+            <article id="value-panel-proximity" role="tabpanel" aria-labelledby="value-tab-proximity" data-value-panel="proximity" hidden><div class="value-panel-icon"><svg><use href="#i-handshake"/></svg></div><div><h4>Proximidade</h4><p>Escutamos antes de propor. Cada solução é construída com a empresa, respeitando a sua realidade, os seus recursos e as suas pessoas.</p></div></article>
+            <article id="value-panel-innovation" role="tabpanel" aria-labelledby="value-tab-innovation" data-value-panel="innovation" hidden><div class="value-panel-icon"><svg><use href="#i-brain"/></svg></div><div><h4>Inovação</h4><p>Aplicamos tecnologia e inteligência artificial quando acrescentam valor real, com segurança, propósito e supervisão humana.</p></div></article>
+            <article id="value-panel-results" role="tabpanel" aria-labelledby="value-tab-results" data-value-panel="results" hidden><div class="value-panel-icon"><svg><use href="#i-chart"/></svg></div><div><h4>Resultados</h4><p>Transformamos análises em prioridades, planos de ação e indicadores que permitam acompanhar a evolução da empresa.</p></div></article>
+            <article id="value-panel-human" role="tabpanel" aria-labelledby="value-tab-human" data-value-panel="human" hidden><div class="value-panel-icon"><svg><use href="#i-users"/></svg></div><div><h4>Valor humano</h4><p>Colocamos as pessoas no centro da transformação, valorizando conhecimento, participação, bem-estar e desenvolvimento.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="solucoes" class="section section-dark">
+        <div class="container">
+          <div class="section-heading wide" data-reveal><span class="section-kicker">Áreas de atuação</span><h2>Começamos pela clareza. Evoluímos para a execução.</h2><p>O Diagnóstico Empresarial 360° é a nossa porta de entrada. A partir das prioridades identificadas, mobilizamos as competências certas em três áreas complementares.</p></div>
+          <div class="solutions-grid">
+            <article class="solution-card solution-card-featured" data-reveal><div class="card-number">01</div><div class="solution-icon"><svg><use href="#i-target"/></svg></div><div><span class="solution-label">Serviço de entrada</span><h3>Diagnóstico e Estratégia</h3><p>Compreensão integrada da empresa, definição de prioridades e plano de ação mensurável.</p></div><button type="button" data-scroll="diagnostico" aria-label="Conhecer o Diagnóstico 360°"><svg><use href="#i-arrow"/></svg></button></article>
+            <article class="solution-card" data-reveal><div class="card-number">02</div><div class="solution-icon"><svg><use href="#i-network"/></svg></div><h3>Processos, CRM e IA</h3><p>Operações organizadas, relações comerciais acompanhadas e tecnologia aplicada com segurança e propósito.</p><button type="button" data-scroll="contacto" aria-label="Saber mais"><svg><use href="#i-arrow"/></svg></button></article>
+            <article class="solution-card" data-reveal><div class="card-number">03</div><div class="solution-icon"><svg><use href="#i-globe"/></svg></div><h3>Crescimento e Internacionalização</h3><p>Posicionamento, mercados, parceiros e decisões de expansão sustentadas por evidência.</p><button type="button" data-scroll="contacto" aria-label="Saber mais"><svg><use href="#i-arrow"/></svg></button></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="diagnostico" class="section diagnosis-section">
+        <div class="container diagnosis-layout">
+          <div class="diagnosis-copy" data-reveal>
+            <span class="section-kicker">Serviço principal</span>
+            <h2>Diagnóstico Empresarial 360°</h2>
+            <p class="diagnosis-lead">Uma análise estruturada para transformar complexidade em prioridades claras, decisões fundamentadas e um plano de ação adequado à realidade da empresa.</p>
+            <div class="diagnosis-meta"><span><strong>10–15</strong> dias úteis</span><span><strong>360°</strong> visão integrada</span><span><strong>1</strong> plano priorizado</span></div>
+            <button class="button button-primary" type="button" data-scroll="fundadoras">Conhecer a edição fundadora <svg><use href="#i-arrow"/></svg></button>
+          </div>
+          <div class="diagnosis-deliverables" data-reveal>
+            <span class="deliverables-title">O que a empresa recebe</span>
+            <ul>
+              <li><svg><use href="#i-check"/></svg><span>Reunião de diagnóstico e recolha orientada de informação</span></li>
+              <li><svg><use href="#i-check"/></svg><span>Análise integrada de estratégia, operação, comercial, pessoas e tecnologia</span></li>
+              <li><svg><use href="#i-check"/></svg><span>Mapa de riscos, oportunidades e prioridades</span></li>
+              <li><svg><use href="#i-check"/></svg><span>Plano de ação de 90 dias com responsáveis e indicadores</span></li>
+              <li><svg><use href="#i-check"/></svg><span>Reunião executiva de apresentação e próximos passos</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="metodo" class="section section-method">
+        <div class="photo-atmosphere photo-method" aria-hidden="true"></div>
+        <div class="container method-layout">
+          <div class="method-intro" data-reveal><span class="section-kicker">Método NEXA360</span><h2>Da compreensão à transformação.</h2><p>Um percurso claro, personalizado e acompanhado — sem soluções genéricas.</p><div class="method-visual"><img src="brand/nexa360-symbol.svg" alt=""><div class="method-ring"></div></div></div>
+          <div class="method-steps">
+            <article class="method-step" data-reveal><span>01</span><div><h3>Diagnosticar</h3><p>Compreendemos a realidade, ouvimos as pessoas e identificamos as causas, não apenas os sintomas.</p></div></article>
+            <article class="method-step" data-reveal><span>02</span><div><h3>Desenhar</h3><p>Criamos uma estratégia integrada, realista e alinhada com os recursos e objetivos da organização.</p></div></article>
+            <article class="method-step" data-reveal><span>03</span><div><h3>Implementar</h3><p>Transformamos o plano em ação, com ferramentas, processos, tecnologia e acompanhamento próximo.</p></div></article>
+            <article class="method-step" data-reveal><span>04</span><div><h3>Evoluir</h3><p>Medimos resultados, aprendemos com os dados e ajustamos continuamente o caminho.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="fundadoras" class="section founders-section">
+        <div class="container founders-layout">
+          <div class="founders-copy" data-reveal>
+            <span class="section-kicker">Programa Empresas Fundadoras</span>
+            <h2>Três PME. Um diagnóstico rigoroso. Uma condição de lançamento.</h2>
+            <p>Selecionaremos três micro ou PME com atividade em Portugal ou com um projeto concreto de entrada, investimento ou expansão no mercado português. A condição fundadora permite validar e aperfeiçoar o método com empresas reais, sem reduzir a profundidade ou a qualidade da entrega.</p>
+            <div class="founders-ethics"><svg><use href="#i-shield"/></svg><span>Confidencialidade obrigatória. Qualquer testemunho ou caso de estudo será opcional e publicado apenas com autorização expressa.</span></div>
+          </div>
+          <div class="founders-offer" data-reveal>
+            <span class="offer-badge">3 vagas · sujeitas a seleção</span>
+            <p class="offer-label">Condição especial da edição fundadora</p>
+            <div class="offer-price">650 € <small>+ IVA</small></div>
+            <p class="offer-future">Valor previsto para edições posteriores: 950 € + IVA</p>
+            <ul>
+              <li><svg><use href="#i-check"/></svg><span>Micro ou PME com atividade, investimento ou projeto de expansão ligado a Portugal</span></li>
+              <li><svg><use href="#i-check"/></svg><span>Conclusão em 15 dias úteis</span></li>
+              <li><svg><use href="#i-check"/></svg><span>Entrega integral do Diagnóstico 360°</span></li>
+              <li><svg><use href="#i-check"/></svg><span>Candidatura sem compromisso</span></li>
+            </ul>
+            <button class="button button-primary founders-button" type="button" data-scroll="contacto">Manifestar interesse na edição fundadora <svg><use href="#i-arrow"/></svg></button>
+            <p class="founders-status-note"><svg><use href="#i-shield"/></svg><span>Informação de planeamento: a abertura oficial da atividade e das candidaturas está prevista para depois de novembro de 2026. Até essa data, o programa encontra-se em preparação e recebe apenas manifestações de interesse.</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="casos" class="section section-cases">
+        <div class="container">
+          <div class="section-heading wide" data-reveal><span class="section-kicker">Projetos e soluções</span><h2>Construímos evidência com transparência — sem apresentar conceitos como resultados de clientes.</h2></div>
+          <div class="cases-grid">
+            <article class="case-card" data-reveal><div class="case-top"><span>Demonstração tecnológica</span></div><div class="case-graphic"><svg><use href="#i-network"/></svg></div><div class="case-content"><small>Tecnologia &amp; Relações</small><h3>CRM NEXA360 Enterprise</h3><p>Protótipo funcional público, com dados fictícios, para demonstrar gestão comercial multilingue. A versão privada segura será uma fase posterior de desenvolvimento.</p><span class="case-safety-note"><svg><use href="#i-shield"/></svg> Ambiente público com dados exclusivamente fictícios.</span><a class="case-action" href="https://monicacardoso01.github.io/nexa360-academic-demo/" target="_blank" rel="noopener noreferrer">Explorar demonstração <svg><use href="#i-arrow"/></svg></a></div></article>
+            <article class="case-card" data-reveal><div class="case-top"><span>Projeto estratégico</span></div><div class="case-graphic"><svg><use href="#i-globe"/></svg></div><div class="case-content"><small>Comércio Internacional</small><h3>Internacionalização de PME</h3><p>Modelo integrado de seleção de mercados, entrada internacional, riscos, finanças e KPIs.</p><button class="case-action" type="button" data-scroll="contacto" data-select-challenge="Comércio internacional">Conversar sobre internacionalização <svg><use href="#i-arrow"/></svg></button></div></article>
+            <article class="case-card" data-reveal><div class="case-top"><span>Metodologia própria</span></div><div class="case-graphic"><svg><use href="#i-target"/></svg></div><div class="case-content"><small>Estratégia</small><h3>Diagnóstico Empresarial 360°</h3><p>Leitura multidimensional da empresa para transformar complexidade em prioridades claras.</p><button class="case-action" type="button" data-scroll="diagnostico">Ver Diagnóstico 360° <svg><use href="#i-arrow"/></svg></button></div></article>
+          </div>
+          <p class="case-note" data-reveal>* Nesta fase, apresentamos projetos próprios, metodologias e demonstrações identificados pela sua natureza. Os primeiros resultados de clientes serão publicados apenas com autorização.</p>
+        </div>
+      </section>
+
+      <section id="conhecimento" class="section section-knowledge">
+        <div class="photo-atmosphere photo-knowledge" aria-hidden="true"></div>
+        <div class="container knowledge-layout">
+          <div class="knowledge-intro" data-reveal><span class="section-kicker">Centro de Conhecimento</span><h2 id="knowledge-title">Conhecimento que não fica no papel. Torna-se decisão.</h2><div class="knowledge-orbit"><svg><use href="#i-bulb"/></svg><span></span></div></div>
+<section class="article-list" aria-labelledby="knowledge-title">
+  <button class="article-row" type="button" data-reveal data-article="growth" aria-label="Abrir artigo: Por que crescer sem direção pode fragilizar uma empresa"><span class="article-index">01</span><span class="article-copy"><small>Estratégia</small><span class="article-title">Por que crescer sem direção pode fragilizar uma empresa</span><span class="article-preview">Crescimento saudável exige prioridades, capacidade operacional e decisões coerentes.</span></span><span class="article-time">5 min</span><span class="article-action" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+
+  <button class="article-row" type="button" data-reveal data-article="human-ai" aria-label="Abrir artigo: Como aplicar IA sem perder o valor humano"><span class="article-index">02</span><span class="article-copy"><small>Inteligência Artificial</small><span class="article-title">Como aplicar IA sem perder o valor humano</span><span class="article-preview">A tecnologia cria mais valor quando amplia a capacidade das pessoas em vez de as afastar.</span></span><span class="article-time">7 min</span><span class="article-action" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+
+  <button class="article-row" type="button" data-reveal data-article="international" aria-label="Abrir artigo: O que uma PME deve validar antes de entrar num novo mercado"><span class="article-index">03</span><span class="article-copy"><small>Internacionalização</small><span class="article-title">O que uma PME deve validar antes de entrar num novo mercado</span><span class="article-preview">Antes da expansão, é essencial validar procura, adaptação, riscos e capacidade de execução.</span></span><span class="article-time">8 min</span><span class="article-action" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+
+  <button class="article-row" type="button" data-reveal data-article="lideranca-humana" aria-label="Abrir artigo: Liderar pessoas não é apenas distribuir tarefas"><span class="article-index">04</span><span class="article-copy"><small>Liderança</small><span class="article-title">Liderar pessoas não é apenas distribuir tarefas</span><span class="article-preview">Liderança verdadeira combina direção, escuta, confiança e responsabilidade.</span></span><span class="article-time">6 min</span><span class="article-action" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+
+  <button class="article-row article-row-extra" type="button" hidden data-reveal data-article="sme-diagnosis" aria-label="Abrir artigo: 7 sinais de que a sua PME precisa de um diagnóstico estratégico"><span class="article-index">05</span><span class="article-copy"><small>Diagnóstico</small><span class="article-title">7 sinais de que a sua PME precisa de um diagnóstico estratégico</span><span class="article-preview">Problemas recorrentes podem ser sintomas de prioridades, processos e indicadores desalinhados.</span></span><span class="article-time">7 min</span><span class="article-action" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+
+  <button class="article-row article-row-extra" type="button" hidden data-reveal data-article="sme-automation" aria-label="Abrir artigo: IA nas PME: 5 processos que podem ser automatizados sem perder o valor humano"><span class="article-index">06</span><span class="article-copy"><small>IA aplicada</small><span class="article-title">IA nas PME: 5 processos que podem ser automatizados sem perder o valor humano</span><span class="article-preview">Automatizar com critério liberta tempo para decisões, criatividade e relações comerciais.</span></span><span class="article-time">8 min</span><span class="article-action" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+
+  <button class="article-row article-row-extra" type="button" hidden data-reveal data-article="portugal-entry" aria-label="Abrir artigo: Entrada no mercado português: o que uma PME estrangeira deve validar antes de investir"><span class="article-index">07</span><span class="article-copy"><small>Mercado português</small><span class="article-title">Entrada no mercado português: o que uma PME estrangeira deve validar antes de investir</span><span class="article-preview">Procura, enquadramento, adaptação, parceiros e capacidade operacional devem ser validados antes do investimento.</span></span><span class="article-time">9 min</span><span class="article-action" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+
+  <button class="article-row article-row-extra" type="button" hidden data-reveal data-article="sme-priorities" aria-label="Abrir artigo: Da lista de tarefas à execução: como definir prioridades numa PME"><span class="article-index">08</span><span class="article-copy"><small>Gestão e execução</small><span class="article-title">Da lista de tarefas à execução: como definir prioridades numa PME</span><span class="article-preview">Priorizar é escolher o que gera valor agora, atribuir responsabilidade e acompanhar o resultado.</span></span><span class="article-time">6 min</span><span class="article-action" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></button>
+
+  <button class="knowledge-toggle" id="knowledgeToggle" type="button" aria-expanded="false">Ver mais artigos <svg><use href="#i-arrow"/></svg></button>
+</section>
+</div>
+</section>
+      <section class="section partners-section">
+        <div class="container partners-card" data-reveal><div class="partners-icon"><svg><use href="#i-handshake"/></svg></div><div><span class="section-kicker">Parcerias</span><h2>As melhores transformações raramente acontecem a sós.</h2><p>Procuramos construir relações com empresas, especialistas, instituições, associações e investidores que partilham a nossa visão de crescimento responsável, inovação e valor humano.</p></div><button class="button button-light" type="button" data-scroll="contacto">Explorar uma parceria <svg><use href="#i-arrow"/></svg></button></div>
+      </section>
+
+      <section class="section commitments-section" aria-labelledby="commitments-title">
+        <div class="container">
+          <div class="section-heading wide" data-reveal><span class="section-kicker">Compromissos NEXA360</span><h2 id="commitments-title">Confiança constrói-se com critérios claros antes de qualquer projeto começar.</h2><p>Estabelecemos expectativas, limites e responsabilidades desde a primeira conversa.</p></div>
+          <div class="commitments-grid">
+            <article data-reveal><svg><use href="#i-shield"/></svg><h3>Confidencialidade por princípio</h3><p>Informação empresarial não é divulgada nem transformada em caso de estudo sem autorização expressa.</p></article>
+            <article data-reveal><svg><use href="#i-target"/></svg><h3>Escopo e investimento definidos</h3><p>Entregáveis, prazo, responsabilidades e valor são acordados antes do início do trabalho.</p></article>
+            <article data-reveal><svg><use href="#i-chart"/></svg><h3>Recomendações fundamentadas</h3><p>Separamos evidência, hipótese e decisão para evitar promessas vagas ou conclusões sem suporte.</p></article>
+            <article data-reveal><svg><use href="#i-users"/></svg><h3>Autonomia para a empresa</h3><p>O objetivo é deixar prioridades, ferramentas e critérios que a equipa consiga compreender e utilizar.</p></article>
+          </div>
+          <div class="contact-journey" data-reveal>
+            <span>Como começamos</span>
+            <ol><li><strong>01</strong> Pedido inicial</li><li><strong>02</strong> Verificação de enquadramento</li><li><strong>03</strong> Conversa confidencial</li><li><strong>04</strong> Proposta e decisão</li></ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="section contact-section">
+        <div class="container contact-layout">
+          <div class="contact-copy" data-reveal><span class="section-kicker">Contacto e manifestações de interesse</span><h2>Toda grande transformação começa com uma conversa.</h2><p>Conte-nos o desafio, a ambição ou a ideia. A primeira reunião será um espaço de escuta, clareza e descoberta de possibilidades.</p><div class="contact-promise"><svg><use href="#i-check"/></svg><span>Escuta atenta · Confidencialidade · Próximos passos claros</span></div></div>
+          <form class="contact-form" id="contactForm" data-reveal>
+            <div class="form-demo-badge"><svg><use href="#i-shield"/></svg><span>Modo de demonstração — nenhum dado é enviado</span></div>
+            <div class="form-row"><label>Nome<input required type="text" name="name" autocomplete="name"></label><label>Empresa<input type="text" name="company" autocomplete="organization"></label></div>
+            <label>E-mail<input required type="email" name="email" autocomplete="email"></label>
+            <label>Qual é o principal desafio?<select required name="challenge"><option value="" disabled selected>Selecione uma opção</option><option>Programa Empresas Fundadoras</option><option>Diagnóstico Empresarial 360°</option><option>Estratégia e crescimento</option><option>CRM e processos</option><option>Inteligência Artificial</option><option>Marketing e marca</option><option>Comércio internacional</option><option>Parceria institucional</option><option>Outro desafio</option></select></label>
+            <label>Mensagem<textarea required rows="5" name="message"></textarea></label>
+            <button class="button button-primary form-submit" type="submit">Simular pedido de contacto <svg><use href="#i-arrow"/></svg></button>
+            <small class="privacy-note">Os campos existem apenas para demonstrar a experiência. A informação introduzida não sai deste navegador nem é guardada pela NEXA360.</small>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top"><img src="brand/nexa360-site-light.svg" alt="NEXA360"><p>Estratégia que transforma. Tecnologia com propósito. Crescimento com valor humano.</p><button type="button" data-scroll="inicio" aria-label="Voltar ao topo">↑</button></div>
+      <div class="container footer-bottom"><span>© 2026 NEXA360 — Projeto empresarial em desenvolvimento. Responsável pelo projeto: Mônica Cardoso.</span><div><button type="button" data-legal="privacy">Privacidade</button><button type="button" data-legal="cookies">Cookies</button><button type="button" data-legal="terms">Termos</button></div></div>
+    </footer>
+
+    <div class="modal-backdrop" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="articleModalTitle" hidden>
+      <article class="article-modal">
+        <button class="article-modal-close" id="closeArticleModal" type="button" aria-label="Fechar artigo"><svg><use href="#i-x"/></svg></button>
+        <div class="article-modal-meta"><span id="articleModalCategory">Estratégia</span><span id="articleModalTime">5 min</span></div>
+        <h3 id="articleModalTitle">Artigo NEXA360</h3>
+        <div class="article-modal-body" id="articleModalBody"></div>
+        <div class="article-modal-footer"><span>Insight NEXA360</span><button class="button button-primary" id="articleConversation" type="button">Conversar sobre este desafio <svg><use href="#i-arrow"/></svg></button></div>
+      </article>
+    </div>
+
+    <div class="modal-backdrop" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successModalTitle" aria-describedby="successModalDescription" hidden>
+      <div class="success-modal"><div class="success-icon"><svg><use href="#i-check"/></svg></div><h3 id="successModalTitle">Pedido preparado.</h3><p id="successModalDescription">Este formulário encontra-se em modo de demonstração e ainda não envia dados. A integração segura com o CRM privado será ativada na fase operacional.</p><button class="button button-primary" id="closeModal" type="button">Fechar</button></div>
+    </div>
+
+    <div class="modal-backdrop" id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle" hidden>
+      <article class="legal-modal">
+        <button class="article-modal-close" id="closeLegalModal" type="button" aria-label="Fechar informação legal"><svg><use href="#i-x"/></svg></button>
+        <span class="section-kicker">Informação preliminar</span>
+        <h3 id="legalModalTitle">Informação legal</h3>
+        <div class="legal-modal-body" id="legalModalBody"></div>
+        <p class="legal-review-note"><svg><use href="#i-shield"/></svg><span>Texto informativo sujeito a revisão jurídica antes da ativação comercial e da recolha de dados pessoais.</span></p>
+        <div class="legal-sources"><span>Referências oficiais</span><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noopener noreferrer">RGPD · EUR-Lex</a><a href="https://www.cnpd.pt/" target="_blank" rel="noopener noreferrer">CNPD</a></div>
+      </article>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
