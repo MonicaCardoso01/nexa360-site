@@ -74,6 +74,10 @@ img { max-width: 100%; display: block; }
 .button-primary { color: #051923; background: linear-gradient(135deg, #fff, #8fffc8); box-shadow: 0 18px 40px rgba(33,185,121,.22); }
 .button-primary:hover { box-shadow: 0 22px 55px rgba(33,185,121,.32); }
 .button-ghost { color: #fff; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); }
+.button-text { min-height: 48px; padding: 0 7px; border-radius: 8px; color: #bfe0eb; background: transparent; box-shadow: none; }
+.button-text:hover, .button-text:focus-visible { color: #fff; background: rgba(255,255,255,.045); box-shadow: none; outline: none; }
+.button-text svg { transition: transform .25s ease; }
+.button-text:hover svg, .button-text:focus-visible svg { transform: translateX(4px); }
 .trust-line { margin-top: 25px; color: #83a6b9; display: flex; align-items: center; gap: 9px; font-size: 13px; }
 .trust-line svg { color: var(--mint); }
 .hero-stage { position: relative; height: 560px; display: grid; place-items: center; }
@@ -1208,14 +1212,15 @@ body.modal-open { overflow: hidden; }
 .inertia-copy > p { max-width: 680px; color: var(--muted); font-size: 17px; line-height: 1.72; }
 .inertia-copy .inertia-lead { margin: 18px 0 28px; padding-left: 17px; border-left: 3px solid #1baa78; color: #31556a; font-weight: 720; }
 .inertia-copy .button-primary { color: #fff; background: linear-gradient(135deg, #2279d3, #159a72); }
+.inertia-example { max-width: 690px; margin: 0 0 28px; padding: 23px 24px; border: 1px solid rgba(22,139,105,.18); border-radius: 20px; background: linear-gradient(135deg, rgba(52,127,232,.055), rgba(33,185,121,.085)); box-shadow: 0 16px 40px rgba(16,45,70,.055); }
+.inertia-example > span { display: block; margin-bottom: 10px; color: #168b69; font-size: 10px; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+.inertia-example p { margin: 0; color: #49687a; font-size: 13px; line-height: 1.65; }
+.inertia-example strong { display: block; margin: 14px 0 10px; color: #0f3e51; font-size: clamp(17px, 2vw, 22px); line-height: 1.35; }
+.inertia-example small { display: block; color: #6d8492; font-size: 11px; line-height: 1.55; }
 .inertia-signals { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .inertia-signals article { min-height: 154px; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; border: 1px solid #dce9ed; border-radius: 21px; background: rgba(255,255,255,.84); box-shadow: 0 16px 38px rgba(13,54,73,.06); }
 .inertia-signals svg { width: 28px; height: 28px; color: #168c69; }
 .inertia-signals span { max-width: 210px; color: #1a4055; font-size: 15px; font-weight: 790; line-height: 1.45; }
-.inertia-ethics { position: relative; display: flex; gap: 16px; align-items: flex-start; margin-top: 42px; padding: 20px 24px; border: 1px solid rgba(27,169,120,.2); border-radius: 18px; background: #edf9f4; color: #285c4d; }
-.inertia-ethics > svg { flex: 0 0 auto; width: 24px; height: 24px; color: #16946a; }
-.inertia-ethics strong { display: block; margin-bottom: 5px; color: #14634f; }
-.inertia-ethics p { margin: 0; line-height: 1.6; }
 
 .solution-card-featured { grid-column: span 3; min-height: 230px; display: grid; grid-template-columns: auto auto 1fr auto; gap: 24px; align-items: center; padding-right: 90px; background: linear-gradient(120deg, rgba(52,127,232,.17), rgba(33,185,121,.13)); border-color: rgba(145,255,208,.24); }
 .solution-card-featured .card-number, .solution-card-featured .solution-icon { align-self: center; }
@@ -1255,6 +1260,8 @@ body.modal-open { overflow: hidden; }
 .offer-future { margin: 4px 0 27px; padding-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,.11); color: #a8bec9; font-size: 13px; }
 .founders-offer li { color: #e4eef3; }
 .founders-button { width: 100%; margin-top: 28px; }
+.founders-waitlist-note { margin: 17px 0 0; padding: 15px 16px; border-radius: 14px; color: #d7e7ed; background: rgba(145,255,208,.075); font-size: 12px; line-height: 1.58; }
+.founders-waitlist-note strong { color: var(--mint); }
 .founders-status-note { display: flex; gap: 10px; margin: 18px 0 0; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.11); color: #afc3ce; font-size: 12px; line-height: 1.55; }
 .founders-status-note svg { flex: 0 0 auto; width: 18px; height: 18px; margin-top: 1px; color: var(--mint); }
 
@@ -1279,7 +1286,7 @@ body.modal-open { overflow: hidden; }
   .inertia-signals { grid-template-columns: 1fr; }
   .inertia-signals article { min-height: 120px; }
   .inertia-copy h2 { font-size: 38px; }
-  .inertia-ethics { padding: 18px; }
+  .inertia-example { padding: 19px; }
   .values-experience { margin-top: 55px; }
   .values-strip { grid-template-columns: 1fr; }
   .values-strip button, .values-strip button:nth-child(2n) { min-height: 62px; border-right: 0; border-bottom: 1px solid var(--line); }
