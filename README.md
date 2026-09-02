@@ -14,7 +14,9 @@ Polimento estratégico após avaliação externa do posicionamento e do Programa
 - Estatuto pré-operacional explicado com transparência: projeto sob responsabilidade de Mônica Cardoso, com abertura oficial prevista para depois de novembro de 2026.
 - Candidaturas substituídas por manifestações de interesse até à abertura da atividade, prevista para depois de novembro de 2026.
 - Notas de rigor reunidas na secção “Como trabalhamos com transparência”, preservando apenas os avisos contextuais indispensáveis.
-- Avisos preliminares de Privacidade, Cookies e Termos acessíveis no rodapé, com referências oficiais.
+- Política de Privacidade/RGPD, Cookies e Termos e Condições preliminares acessíveis no rodapé, com referências oficiais.
+- Secção de Perguntas Frequentes em PT, EN e ES, com informação sobre serviços, edição fundadora, contratação, prazos, pagamentos, cancelamento, dados e resultados.
+- Política internacional para UE/EEE e os nove países da CPLP, incluindo contratação transfronteiriça, impostos, moeda, jurisdição e transferências internacionais de dados.
 - Centro de Conhecimento ampliado para oito artigos completos e multilingues.
 - Conteúdo integral disponível em português, inglês e espanhol.
 - Valores NEXA360 explicados numa interação acessível por clique, toque e teclado.
