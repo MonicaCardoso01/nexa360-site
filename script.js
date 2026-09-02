@@ -22,7 +22,7 @@ const extraArticleRows = [...document.querySelectorAll('.article-row-extra')];
 const languageButtons = [...document.querySelectorAll('[data-lang]')];
 const valueButtons = [...document.querySelectorAll('[data-value]')];
 const valuePanels = [...document.querySelectorAll('[data-value-panel]')];
-const sectionIds = ['inicio', 'sobre', 'solucoes', 'metodo', 'casos', 'conhecimento', 'contacto'];
+const sectionIds = ['inicio', 'sobre', 'solucoes', 'metodo', 'casos', 'conhecimento', 'faq', 'contacto'];
 const dialogElements = [articleModal, modal, legalModal];
 const dialogReturnFocus = new WeakMap();
 const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -35,6 +35,28 @@ const translations = {
     "Método": "Method",
     "Transformações": "Transformations",
     "Conhecimento": "Knowledge",
+    "FAQs": "FAQs",
+    "Perguntas frequentes": "Frequently asked questions",
+    "Clareza antes de começarmos.": "Clarity before we begin.",
+    "Respostas diretas sobre a NEXA360, o Diagnóstico 360° e a forma como uma colaboração é preparada.": "Direct answers about NEXA360, the 360° Diagnosis, and how an engagement is prepared.",
+    "O que é a NEXA360?": "What is NEXA360?",
+    "A NEXA360 é um projeto de consultoria empresarial orientado para diagnóstico, estratégia, processos, CRM, inteligência artificial, crescimento e internacionalização, com atenção à sustentabilidade e ao valor humano.": "NEXA360 is a business consulting project focused on diagnosis, strategy, processes, CRM, artificial intelligence, growth, and internationalisation, with attention to sustainability and human value.",
+    "A NEXA360 já iniciou oficialmente a atividade?": "Has NEXA360 officially started operating?",
+    "Ainda não. O projeto encontra-se em desenvolvimento e a abertura oficial está prevista para depois de novembro de 2026. Nesta fase, o website é institucional e demonstrativo.": "Not yet. The project is under development and its official launch is planned for after November 2026. At this stage, the website is institutional and demonstrative.",
+    "O que inclui o Diagnóstico 360°?": "What does the 360° Diagnosis include?",
+    "Inclui recolha estruturada de informação, análise das áreas críticas, identificação de riscos e oportunidades, definição de prioridades e um plano de ação com responsáveis, prazos e indicadores. O âmbito final é confirmado por proposta escrita.": "It includes structured information gathering, analysis of critical areas, identification of risks and opportunities, priorities, and an action plan with owners, deadlines, and indicators. The final scope is confirmed in a written proposal.",
+    "Quanto custa e quanto tempo demora?": "How much does it cost and how long does it take?",
+    "A edição fundadora apresentada no site prevê uma condição de 650 € acrescida de IVA e entrega em 15 dias úteis, nos termos da proposta aplicável. Outros serviços, calendários e investimentos dependem do âmbito acordado com cada organização.": "The founding edition presented on the website provides for a fee of €650 plus VAT and delivery within 15 working days, under the applicable proposal. Other services, schedules, and fees depend on the scope agreed with each organisation.",
+    "Como são definidos pagamento, alterações e cancelamento?": "How are payment, changes, and cancellation defined?",
+    "Essas condições são apresentadas antes do início do trabalho, numa proposta ou contrato escrito. Nenhum serviço é iniciado sem aceitação expressa do âmbito, entregáveis, calendário, investimento, forma de pagamento e regras de alteração ou cancelamento.": "These conditions are presented before work begins in a written proposal or contract. No service starts without express acceptance of the scope, deliverables, schedule, fee, payment method, and change or cancellation rules.",
+    "A NEXA360 garante resultados comerciais?": "Does NEXA360 guarantee business results?",
+    "Não. A NEXA360 compromete-se com método, análise e entregáveis acordados, mas resultados dependem também das decisões, recursos, execução e contexto de cada organização.": "No. NEXA360 commits to the agreed method, analysis, and deliverables, but results also depend on each organisation’s decisions, resources, execution, and context.",
+    "A NEXA360 pode apoiar projetos internacionais?": "Can NEXA360 support international projects?",
+    "Sim, mediante análise prévia do mercado e do enquadramento aplicável. Projetos na União Europeia, no Espaço Económico Europeu ou em países da CPLP exigem proposta própria, com país de destino, moeda, impostos, responsabilidades, regras de dados e parceiros locais definidos quando necessário.": "Yes, subject to prior analysis of the market and applicable framework. Projects in the European Union, European Economic Area, or CPLP countries require a dedicated proposal defining the destination country, currency, taxes, responsibilities, data rules, and local partners where necessary.",
+    "Os dados introduzidos no formulário são guardados?": "Is information entered in the form stored?",
+    "Não na versão atual. O formulário é uma demonstração: a informação não sai do navegador nem é guardada pela NEXA360. A política será atualizada antes de qualquer recolha real.": "Not in the current version. The form is a demonstration: information does not leave the browser and is not stored by NEXA360. The policy will be updated before any real collection.",
+    "Como posso manifestar interesse ou esclarecer outra questão?": "How can I register interest or ask another question?",
+    "Utilize a área de contacto demonstrativa para conhecer a experiência prevista. O canal operacional e os dados comerciais completos serão publicados antes da abertura oficial.": "Use the demonstration contact area to see the intended experience. The operational channel and full business details will be published before the official launch.",
     "Contacto": "Contact",
     "Iniciar uma conversa": "Start a conversation",
     "Estratégia · Tecnologia · Pessoas": "Strategy · Technology · People",
@@ -140,6 +162,7 @@ const translations = {
     "© 2026 NEXA360. Todos os direitos reservados.": "© 2026 NEXA360. All rights reserved.",
     "Privacidade": "Privacy",
     "Termos": "Terms",
+    "Internacional": "International",
     "Mensagem recebida.": "Message received.",
     "Obrigada pelo contacto. Este formulário está preparado para futura integração com o CRM NEXA360.": "Thank you for contacting us. This form is ready for future integration with NEXA360 CRM.",
     "Ajudamos micro, pequenas e médias empresas a diagnosticar problemas, organizar processos e transformar decisões em crescimento sustentável — combinando estratégia, tecnologia e valor humano.": "We help micro, small, and medium-sized businesses diagnose problems, organise processes, and turn decisions into sustainable growth — combining strategy, technology, and human value.",
@@ -256,6 +279,28 @@ const translations = {
     "Método": "Método",
     "Transformações": "Transformaciones",
     "Conhecimento": "Conocimiento",
+    "FAQs": "Preguntas frecuentes",
+    "Perguntas frequentes": "Preguntas frecuentes",
+    "Clareza antes de começarmos.": "Claridad antes de empezar.",
+    "Respostas diretas sobre a NEXA360, o Diagnóstico 360° e a forma como uma colaboração é preparada.": "Respuestas directas sobre NEXA360, el Diagnóstico 360° y cómo se prepara una colaboración.",
+    "O que é a NEXA360?": "¿Qué es NEXA360?",
+    "A NEXA360 é um projeto de consultoria empresarial orientado para diagnóstico, estratégia, processos, CRM, inteligência artificial, crescimento e internacionalização, com atenção à sustentabilidade e ao valor humano.": "NEXA360 es un proyecto de consultoría empresarial centrado en diagnóstico, estrategia, procesos, CRM, inteligencia artificial, crecimiento e internacionalización, con atención a la sostenibilidad y al valor humano.",
+    "A NEXA360 já iniciou oficialmente a atividade?": "¿NEXA360 ya ha iniciado oficialmente su actividad?",
+    "Ainda não. O projeto encontra-se em desenvolvimento e a abertura oficial está prevista para depois de novembro de 2026. Nesta fase, o website é institucional e demonstrativo.": "Todavía no. El proyecto está en desarrollo y la apertura oficial está prevista para después de noviembre de 2026. En esta fase, el sitio es institucional y demostrativo.",
+    "O que inclui o Diagnóstico 360°?": "¿Qué incluye el Diagnóstico 360°?",
+    "Inclui recolha estruturada de informação, análise das áreas críticas, identificação de riscos e oportunidades, definição de prioridades e um plano de ação com responsáveis, prazos e indicadores. O âmbito final é confirmado por proposta escrita.": "Incluye recogida estructurada de información, análisis de áreas críticas, identificación de riesgos y oportunidades, prioridades y un plan de acción con responsables, plazos e indicadores. El alcance final se confirma por escrito.",
+    "Quanto custa e quanto tempo demora?": "¿Cuánto cuesta y cuánto tarda?",
+    "A edição fundadora apresentada no site prevê uma condição de 650 € acrescida de IVA e entrega em 15 dias úteis, nos termos da proposta aplicável. Outros serviços, calendários e investimentos dependem do âmbito acordado com cada organização.": "La edición fundadora presentada en el sitio prevé 650 € más IVA y entrega en 15 días hábiles, conforme a la propuesta aplicable. Los demás servicios, plazos e inversiones dependen del alcance acordado.",
+    "Como são definidos pagamento, alterações e cancelamento?": "¿Cómo se definen el pago, los cambios y la cancelación?",
+    "Essas condições são apresentadas antes do início do trabalho, numa proposta ou contrato escrito. Nenhum serviço é iniciado sem aceitação expressa do âmbito, entregáveis, calendário, investimento, forma de pagamento e regras de alteração ou cancelamento.": "Estas condiciones se presentan antes de iniciar el trabajo en una propuesta o contrato escrito. Ningún servicio comienza sin aceptación expresa del alcance, entregables, calendario, inversión, forma de pago y reglas de cambio o cancelación.",
+    "A NEXA360 garante resultados comerciais?": "¿NEXA360 garantiza resultados comerciales?",
+    "Não. A NEXA360 compromete-se com método, análise e entregáveis acordados, mas resultados dependem também das decisões, recursos, execução e contexto de cada organização.": "No. NEXA360 se compromete con el método, el análisis y los entregables acordados, pero los resultados también dependen de las decisiones, recursos, ejecución y contexto de cada organización.",
+    "A NEXA360 pode apoiar projetos internacionais?": "¿Puede NEXA360 apoyar proyectos internacionales?",
+    "Sim, mediante análise prévia do mercado e do enquadramento aplicável. Projetos na União Europeia, no Espaço Económico Europeu ou em países da CPLP exigem proposta própria, com país de destino, moeda, impostos, responsabilidades, regras de dados e parceiros locais definidos quando necessário.": "Sí, previa evaluación del mercado y del marco aplicable. Los proyectos en la Unión Europea, el Espacio Económico Europeo o países de la CPLP requieren una propuesta propia que defina país de destino, moneda, impuestos, responsabilidades, reglas de datos y socios locales cuando sean necesarios.",
+    "Os dados introduzidos no formulário são guardados?": "¿Se guardan los datos introducidos en el formulario?",
+    "Não na versão atual. O formulário é uma demonstração: a informação não sai do navegador nem é guardada pela NEXA360. A política será atualizada antes de qualquer recolha real.": "No en la versión actual. El formulario es una demostración: la información no sale del navegador ni es almacenada por NEXA360. La política se actualizará antes de cualquier recogida real.",
+    "Como posso manifestar interesse ou esclarecer outra questão?": "¿Cómo puedo manifestar interés o plantear otra pregunta?",
+    "Utilize a área de contacto demonstrativa para conhecer a experiência prevista. O canal operacional e os dados comerciais completos serão publicados antes da abertura oficial.": "Utilice el área de contacto demostrativa para conocer la experiencia prevista. El canal operativo y los datos comerciales completos se publicarán antes de la apertura oficial.",
     "Contacto": "Contacto",
     "Iniciar uma conversa": "Iniciar una conversación",
     "Estratégia · Tecnologia · Pessoas": "Estrategia · Tecnología · Personas",
@@ -361,6 +406,7 @@ const translations = {
     "© 2026 NEXA360. Todos os direitos reservados.": "© 2026 NEXA360. Todos los derechos reservados.",
     "Privacidade": "Privacidad",
     "Termos": "Términos",
+    "Internacional": "Internacional",
     "Mensagem recebida.": "Mensaje recibido.",
     "Obrigada pelo contacto. Este formulário está preparado para futura integração com o CRM NEXA360.": "Gracias por ponerse en contacto. Este formulario está preparado para su futura integración con el CRM NEXA360.",
     "Ajudamos micro, pequenas e médias empresas a diagnosticar problemas, organizar processos e transformar decisões em crescimento sustentável — combinando estratégia, tecnologia e valor humano.": "Ayudamos a micro, pequeñas y medianas empresas a diagnosticar problemas, organizar procesos y transformar decisiones en crecimiento sostenible, combinando estrategia, tecnología y valor humano.",
@@ -848,20 +894,26 @@ const legalContent = {
     "pt": { "title": "Privacidade", "sections": [
       ["Situação atual", "Este website funciona em modo de demonstração. O formulário não transmite nem guarda os dados introduzidos e não está ligado ao CRM NEXA360. O projeto é desenvolvido sob a responsabilidade de Mônica Cardoso."],
       ["Preferência de idioma", "O navegador pode guardar localmente apenas a preferência PT, EN ou ES. Esta informação permanece no dispositivo e não identifica diretamente o visitante."],
-      ["Antes da recolha real", "Antes de ativar qualquer formulário operacional, a NEXA360 publicará a identidade e os contactos do responsável pelo tratamento, finalidades, fundamento jurídico, destinatários, conservação, direitos aplicáveis e canal para reclamação."],
-      ["Direitos", "Quando existir tratamento de dados pessoais, os titulares poderão exercer os direitos previstos no RGPD e dirigir-se à Comissão Nacional de Proteção de Dados nos termos legalmente aplicáveis."]
+      ["Alojamento e ligações externas", "O website é publicado através do GitHub Pages. As ligações externas conduzem aos respetivos fornecedores, que aplicam as suas próprias políticas."],
+      ["Antes da recolha real", "Antes de ativar qualquer formulário operacional, a NEXA360 publicará a identidade e os contactos do responsável pelo tratamento, categorias de dados, finalidades, fundamento jurídico, destinatários, transferências, conservação, medidas aplicáveis e canal para reclamação."],
+      ["Direitos dos titulares", "Quando existir tratamento de dados pessoais, os titulares poderão, nos termos aplicáveis, pedir acesso, retificação, apagamento, limitação, portabilidade ou oposição, retirar consentimento quando esse for o fundamento e apresentar reclamação à Comissão Nacional de Proteção de Dados."],
+      ["Atualização", "Esta informação será revista antes da recolha de dados ou do início da atividade comercial. Última atualização: 2 de setembro de 2026."]
     ]},
     "en": { "title": "Privacy", "sections": [
       ["Current status", "This website operates in demonstration mode. The form neither sends nor stores entered data and is not connected to NEXA360 CRM. The project is developed under the responsibility of Mônica Cardoso."],
       ["Language preference", "The browser may store locally only the PT, EN, or ES preference. This information remains on the device and does not directly identify the visitor."],
-      ["Before real collection", "Before activating any operational form, NEXA360 will publish the identity and contact details of the controller, purposes, legal basis, recipients, retention, applicable rights, and complaint channel."],
-      ["Rights", "When personal-data processing exists, data subjects will be able to exercise the rights provided by the GDPR and contact the Portuguese Data Protection Authority under the applicable legal terms."]
+      ["Hosting and external links", "The website is published through GitHub Pages. External links lead to the relevant providers, which apply their own policies."],
+      ["Before real collection", "Before activating any operational form, NEXA360 will publish the controller’s identity and contact details, data categories, purposes, legal basis, recipients, transfers, retention, applicable measures, and complaint channel."],
+      ["Data-subject rights", "Where personal data is processed, data subjects may, as applicable, request access, rectification, erasure, restriction, portability or objection, withdraw consent where it is the legal basis, and complain to the Portuguese Data Protection Authority."],
+      ["Update", "This notice will be reviewed before data collection or commercial activity begins. Last updated: 2 September 2026."]
     ]},
     "es": { "title": "Privacidad", "sections": [
       ["Situación actual", "Este sitio funciona en modo de demostración. El formulario no transmite ni almacena los datos introducidos y no está conectado al CRM NEXA360. El proyecto se desarrolla bajo la responsabilidad de Mônica Cardoso."],
       ["Preferencia de idioma", "El navegador puede guardar localmente únicamente la preferencia PT, EN o ES. Esta información permanece en el dispositivo y no identifica directamente al visitante."],
-      ["Antes de la recogida real", "Antes de activar cualquier formulario operativo, NEXA360 publicará la identidad y los datos de contacto del responsable, las finalidades, la base jurídica, los destinatarios, la conservación, los derechos aplicables y el canal de reclamación."],
-      ["Derechos", "Cuando exista tratamiento de datos personales, los interesados podrán ejercer los derechos previstos en el RGPD y dirigirse a la autoridad portuguesa de protección de datos conforme a los términos legales aplicables."]
+      ["Alojamiento y enlaces externos", "El sitio se publica mediante GitHub Pages. Los enlaces externos conducen a sus respectivos proveedores, que aplican sus propias políticas."],
+      ["Antes de la recogida real", "Antes de activar cualquier formulario operativo, NEXA360 publicará la identidad y los datos de contacto del responsable, categorías de datos, finalidades, base jurídica, destinatarios, transferencias, conservación, medidas aplicables y canal de reclamación."],
+      ["Derechos de los interesados", "Cuando se traten datos personales, los interesados podrán, según corresponda, solicitar acceso, rectificación, supresión, limitación, portabilidad u oposición, retirar el consentimiento cuando sea la base jurídica y reclamar ante la autoridad portuguesa de protección de datos."],
+      ["Actualización", "Este aviso será revisado antes de recoger datos o iniciar la actividad comercial. Última actualización: 2 de septiembre de 2026."]
     ]}
   },
   "cookies": {
@@ -882,23 +934,79 @@ const legalContent = {
     ]}
   },
   "terms": {
-    "pt": { "title": "Termos de utilização", "sections": [
+    "pt": { "title": "Termos de utilização e condições preliminares", "sections": [
       ["Natureza do website", "Este website apresenta a proposta, metodologias e demonstrações da NEXA360. Nesta fase, possui natureza institucional e demonstrativa. A abertura oficial da atividade está prevista para depois de novembro de 2026."],
+      ["Identificação", "A NEXA360 é um projeto empresarial em desenvolvimento, sob responsabilidade de Mônica Cardoso. A identificação fiscal, a morada comercial e os contactos operacionais serão publicados antes da aceitação de contratos ou pagamentos."],
+      ["Contratação", "Cada colaboração depende de proposta ou contrato escrito com âmbito, entregáveis, responsabilidades, calendário, investimento, impostos, pagamento, validade e critérios de aceitação. A informação do website não constitui, por si só, uma proposta contratual."],
+      ["Edição fundadora", "A condição indicada para o Diagnóstico 360° é de 650 € acrescida de IVA, com entrega prevista em 15 dias úteis, sujeita à seleção da organização, confirmação do âmbito e aceitação da proposta aplicável."],
+      ["Pagamentos, alterações e cancelamento", "Esta versão do website não recebe pagamentos. Meios e prazos de pagamento, faturação, alterações, reagendamento, suspensão e cancelamento serão definidos na proposta e aceites antes do início. Permanecem salvaguardados os direitos imperativos aplicáveis ao cliente."],
       ["Sem aconselhamento vinculativo", "Os conteúdos não substituem diagnóstico individual nem aconselhamento jurídico, fiscal, financeiro ou técnico prestado por profissionais habilitados."],
+      ["Resultados e responsabilidade", "A NEXA360 compromete-se com a diligência, o método e os entregáveis acordados, mas não garante resultados comerciais específicos. O cliente é responsável pela exatidão da informação fornecida e pelas decisões que adotar."],
+      ["Confidencialidade e dados", "A utilização de informação empresarial e dados pessoais será limitada ao âmbito autorizado e regulada na proposta, no contrato ou em instrumento próprio."],
       ["Demonstração CRM", "O CRM público utiliza dados fictícios. Não devem ser introduzidos dados pessoais, empresariais confidenciais ou credenciais reais."],
-      ["Propriedade e ligações", "A marca, os textos, os elementos visuais e as demonstrações pertencem aos respetivos titulares. Ligações externas são disponibilizadas por conveniência e estão sujeitas aos termos dos respetivos serviços."]
+      ["Propriedade e ligações", "A marca, os textos, os elementos visuais e as demonstrações pertencem aos respetivos titulares. Ligações externas estão sujeitas aos termos dos respetivos serviços."],
+      ["Questões e litígios", "Questões contratuais serão tratadas pelo contacto indicado na proposta. Antes da atividade comercial serão publicados o canal formal de reclamações e, quando aplicável, informação sobre resolução alternativa de litígios de consumo."],
+      ["Atualização", "Estes termos serão revistos antes da abertura comercial. Última atualização: 2 de setembro de 2026."]
     ]},
-    "en": { "title": "Terms of use", "sections": [
+    "en": { "title": "Terms of use and preliminary conditions", "sections": [
       ["Nature of the website", "This website presents NEXA360’s proposition, methodologies, and demonstrations. At this stage, it is institutional and demonstrative in nature. The official start of activity is planned for after November 2026."],
+      ["Identification", "NEXA360 is a business project under development, led by Mônica Cardoso. Tax identification, business address, and operational contact details will be published before any contract or payment is accepted."],
+      ["Engagement", "Each engagement requires a written proposal or contract defining scope, deliverables, responsibilities, schedule, fees, taxes, payment, validity, and acceptance criteria. Website information is not, by itself, a contractual offer."],
+      ["Founding edition", "The stated fee for the 360° Diagnosis is €650 plus VAT, with expected delivery within 15 working days, subject to selection, scope confirmation, and acceptance of the applicable proposal."],
+      ["Payments, changes, and cancellation", "This website does not accept payments. Payment and invoicing terms, changes, rescheduling, suspension, and cancellation will be defined and accepted before work begins. Any mandatory client rights remain protected."],
       ["No binding advice", "Content does not replace an individual diagnosis or legal, tax, financial, or technical advice provided by qualified professionals."],
+      ["Results and liability", "NEXA360 commits to due care, method, and agreed deliverables but does not guarantee specific business results. Clients are responsible for the accuracy of information supplied and the decisions they make."],
+      ["Confidentiality and data", "Use of business information and personal data will be limited to the authorised scope and governed by the proposal, contract, or a separate instrument."],
       ["CRM demonstration", "The public CRM uses fictional data. Personal data, confidential business information, or real credentials must not be entered."],
-      ["Ownership and links", "The brand, texts, visual elements, and demonstrations belong to their respective owners. External links are provided for convenience and are subject to the terms of their respective services."]
+      ["Ownership and links", "The brand, texts, visual elements, and demonstrations belong to their respective owners. External links are subject to the terms of their respective services."],
+      ["Questions and disputes", "Contract questions will use the contact specified in the proposal. A formal complaints channel and, where applicable, consumer alternative-dispute-resolution information will be published before commercial activity."],
+      ["Update", "These terms will be reviewed before commercial launch. Last updated: 2 September 2026."]
     ]},
-    "es": { "title": "Términos de uso", "sections": [
+    "es": { "title": "Términos de uso y condiciones preliminares", "sections": [
       ["Naturaleza del sitio", "Este sitio presenta la propuesta, las metodologías y las demostraciones de NEXA360. En esta fase, tiene carácter institucional y demostrativo. El inicio oficial de la actividad está previsto para después de noviembre de 2026."],
+      ["Identificación", "NEXA360 es un proyecto empresarial en desarrollo, bajo la responsabilidad de Mônica Cardoso. La identificación fiscal, dirección comercial y contactos operativos se publicarán antes de aceptar contratos o pagos."],
+      ["Contratación", "Cada colaboración requiere una propuesta o contrato escrito con alcance, entregables, responsabilidades, calendario, inversión, impuestos, pago, validez y criterios de aceptación. La información del sitio no constituye por sí sola una oferta contractual."],
+      ["Edición fundadora", "La condición indicada para el Diagnóstico 360° es de 650 € más IVA, con entrega prevista en 15 días hábiles, sujeta a selección, confirmación del alcance y aceptación de la propuesta aplicable."],
+      ["Pagos, cambios y cancelación", "Este sitio no recibe pagos. Los medios y plazos de pago, facturación, cambios, reprogramación, suspensión y cancelación se definirán y aceptarán antes de iniciar el trabajo. Se mantienen los derechos imperativos aplicables al cliente."],
       ["Sin asesoramiento vinculante", "Los contenidos no sustituyen un diagnóstico individual ni el asesoramiento jurídico, fiscal, financiero o técnico prestado por profesionales cualificados."],
+      ["Resultados y responsabilidad", "NEXA360 se compromete con la diligencia, el método y los entregables acordados, pero no garantiza resultados comerciales específicos. El cliente responde por la exactitud de la información facilitada y por sus decisiones."],
+      ["Confidencialidad y datos", "El uso de información empresarial y datos personales se limitará al alcance autorizado y se regulará en la propuesta, contrato o instrumento específico."],
       ["Demostración del CRM", "El CRM público utiliza datos ficticios. No deben introducirse datos personales, información empresarial confidencial ni credenciales reales."],
-      ["Propiedad y enlaces", "La marca, los textos, los elementos visuales y las demostraciones pertenecen a sus respectivos titulares. Los enlaces externos se ofrecen por comodidad y están sujetos a las condiciones de sus respectivos servicios."]
+      ["Propiedad y enlaces", "La marca, los textos, los elementos visuales y las demostraciones pertenecen a sus titulares. Los enlaces externos están sujetos a las condiciones de los respectivos servicios."],
+      ["Consultas y litigios", "Las consultas contractuales se atenderán por el contacto indicado en la propuesta. Antes de la actividad comercial se publicará el canal formal de reclamaciones y, cuando corresponda, la información sobre resolución alternativa de litigios de consumo."],
+      ["Actualización", "Estos términos serán revisados antes de la apertura comercial. Última actualización: 2 de septiembre de 2026."]
+    ]}
+  },
+  "international": {
+    "pt": { "title": "Política internacional — UE e CPLP", "sections": [
+      ["Âmbito", "A NEXA360 tem base em Portugal e prepara serviços para organizações com atividade ou projetos internacionais. A simples disponibilidade do website noutro país não constitui oferta automática nem confirma que um serviço possa ser prestado nesse mercado."],
+      ["União Europeia e EEE", "Nos projetos que envolvam dados pessoais abrangidos pelo RGPD, a NEXA360 aplicará os princípios de licitude, transparência, minimização, limitação da finalidade, conservação adequada, segurança e responsabilidade. Regras nacionais complementares e direitos obrigatórios do cliente serão verificados para o país envolvido."],
+      ["Comunidade dos Países de Língua Portuguesa", "A abordagem internacional pode abranger Angola, Brasil, Cabo Verde, Guiné-Bissau, Guiné Equatorial, Moçambique, Portugal, São Tomé e Príncipe e Timor-Leste. Cada projeto será analisado segundo a legislação, autoridades, requisitos fiscais, comerciais, cambiais, laborais e de proteção de dados aplicáveis no país de destino."],
+      ["Brasil e outras jurisdições", "Quando aplicável, projetos relacionados com o Brasil considerarão a Lei Geral de Proteção de Dados Pessoais — LGPD. Nos restantes mercados serão identificadas as normas nacionais em vigor e, quando necessário, obtido apoio de profissionais ou parceiros locais qualificados."],
+      ["Transferências internacionais de dados", "Dados pessoais não serão transferidos para fora do EEE sem fundamento jurídico e salvaguardas adequadas. Quando aplicável, serão avaliadas decisões de adequação, cláusulas contratuais-tipo, medidas suplementares e requisitos do país de origem e de destino."],
+      ["Contratação internacional", "A proposta identificará território, idioma de trabalho, moeda, impostos, custos bancários, calendário, lei aplicável, resolução de litígios, responsabilidades e eventuais parceiros. Nenhuma condição local será presumida ou substituída por este texto geral."],
+      ["Comunicação e acessibilidade", "O website disponibiliza conteúdos em português, inglês e espanhol para facilitar o acesso internacional. Em caso de divergência, a versão contratual expressamente aceite pelas partes prevalecerá sobre traduções informativas."],
+      ["Revisão por mercado", "Antes de iniciar atividade num novo país, a NEXA360 realizará uma verificação jurídica, fiscal e operacional proporcional ao serviço. Esta política é informativa e será atualizada à medida que os mercados forem efetivamente ativados. Última atualização: 2 de setembro de 2026."]
+    ]},
+    "en": { "title": "International policy — EU and CPLP", "sections": [
+      ["Scope", "NEXA360 is based in Portugal and is preparing services for organisations with international operations or projects. The website’s availability in another country is not an automatic offer and does not confirm that a service can be provided in that market."],
+      ["European Union and EEA", "For projects involving personal data covered by the GDPR, NEXA360 will apply lawfulness, transparency, minimisation, purpose limitation, appropriate retention, security, and accountability. Supplementary national rules and mandatory client rights will be assessed for the country involved."],
+      ["Community of Portuguese Language Countries", "The international approach may cover Angola, Brazil, Cabo Verde, Guinea-Bissau, Equatorial Guinea, Mozambique, Portugal, São Tomé and Príncipe, and Timor-Leste. Each project will be assessed against the destination country’s applicable legal, regulatory, tax, commercial, currency, labour, and data-protection requirements."],
+      ["Brazil and other jurisdictions", "Where applicable, projects related to Brazil will take account of the Brazilian General Personal Data Protection Law — LGPD. In other markets, current national rules will be identified and qualified local professionals or partners engaged where necessary."],
+      ["International data transfers", "Personal data will not be transferred outside the EEA without a legal basis and appropriate safeguards. Where relevant, adequacy decisions, standard contractual clauses, supplementary measures, and origin and destination-country requirements will be assessed."],
+      ["International engagement", "The proposal will identify territory, working language, currency, taxes, bank charges, schedule, applicable law, dispute resolution, responsibilities, and any partners. No local condition is presumed or replaced by this general notice."],
+      ["Communication and accessibility", "The website provides content in Portuguese, English, and Spanish to facilitate international access. In case of discrepancy, the contractual version expressly accepted by the parties will prevail over informative translations."],
+      ["Market-by-market review", "Before operating in a new country, NEXA360 will carry out a legal, tax, and operational review proportionate to the service. This policy is informative and will be updated as markets are effectively activated. Last updated: 2 September 2026."]
+    ]},
+    "es": { "title": "Política internacional — UE y CPLP", "sections": [
+      ["Ámbito", "NEXA360 tiene su base en Portugal y prepara servicios para organizaciones con actividad o proyectos internacionales. La disponibilidad del sitio en otro país no constituye una oferta automática ni confirma que un servicio pueda prestarse en ese mercado."],
+      ["Unión Europea y EEE", "En proyectos con datos personales sujetos al RGPD, NEXA360 aplicará los principios de licitud, transparencia, minimización, limitación de finalidad, conservación adecuada, seguridad y responsabilidad. Se evaluarán las normas nacionales complementarias y los derechos obligatorios del cliente."],
+      ["Comunidad de Países de Lengua Portuguesa", "El enfoque internacional puede incluir Angola, Brasil, Cabo Verde, Guinea-Bisáu, Guinea Ecuatorial, Mozambique, Portugal, Santo Tomé y Príncipe y Timor Oriental. Cada proyecto será evaluado según los requisitos legales, fiscales, comerciales, cambiarios, laborales y de protección de datos del país de destino."],
+      ["Brasil y otras jurisdicciones", "Cuando corresponda, los proyectos relacionados con Brasil considerarán la Ley General de Protección de Datos Personales — LGPD. En los demás mercados se identificarán las normas nacionales vigentes y, cuando sea necesario, se recurrirá a profesionales o socios locales cualificados."],
+      ["Transferencias internacionales de datos", "Los datos personales no serán transferidos fuera del EEE sin base jurídica y garantías adecuadas. Cuando proceda, se evaluarán decisiones de adecuación, cláusulas contractuales tipo, medidas suplementarias y requisitos de los países de origen y destino."],
+      ["Contratación internacional", "La propuesta identificará territorio, idioma de trabajo, moneda, impuestos, gastos bancarios, calendario, ley aplicable, resolución de litigios, responsabilidades y posibles socios. Este aviso general no presume ni sustituye condiciones locales."],
+      ["Comunicación y accesibilidad", "El sitio ofrece contenidos en portugués, inglés y español para facilitar el acceso internacional. En caso de discrepancia, la versión contractual expresamente aceptada por las partes prevalecerá sobre las traducciones informativas."],
+      ["Revisión por mercado", "Antes de operar en un nuevo país, NEXA360 realizará una revisión jurídica, fiscal y operativa proporcional al servicio. Esta política es informativa y se actualizará a medida que se activen los mercados. Última actualización: 2 de septiembre de 2026."]
     ]}
   }
 };
