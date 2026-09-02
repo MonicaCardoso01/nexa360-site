@@ -17,6 +17,8 @@ Polimento estratégico após avaliação externa do posicionamento e do Programa
 - Política de Privacidade/RGPD, Cookies e Termos e Condições preliminares acessíveis no rodapé, com referências oficiais.
 - Secção de Perguntas Frequentes em PT, EN e ES, com informação sobre serviços, edição fundadora, contratação, prazos, pagamentos, cancelamento, dados e resultados.
 - Política internacional para UE/EEE e os nove países da CPLP, incluindo contratação transfronteiriça, impostos, moeda, jurisdição e transferências internacionais de dados.
+- Área “Soluções e investimento” com percurso Diagnosticar → Priorizar → Implementar → Medir, preço apenas para a edição fundadora e serviços variáveis sob proposta.
+- Compromisso comercial humanizado: escuta antes da proposta, ausência de custos inesperados e nenhuma recomendação de serviços desnecessários.
 - Centro de Conhecimento ampliado para oito artigos completos e multilingues.
 - Conteúdo integral disponível em português, inglês e espanhol.
 - Valores NEXA360 explicados numa interação acessível por clique, toque e teclado.
