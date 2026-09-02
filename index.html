@@ -50,6 +50,7 @@
         <button type="button" data-scroll="metodo">Método</button>
         <button type="button" data-scroll="casos">Transformações</button>
         <button type="button" data-scroll="conhecimento">Conhecimento</button>
+        <button type="button" data-scroll="faq">FAQs</button>
         <button type="button" data-scroll="contacto">Contacto</button>
       </nav>
 
@@ -68,6 +69,7 @@
       <button type="button" data-scroll="inicio">Início</button><button type="button" data-scroll="sobre">Quem Somos</button>
       <button type="button" data-scroll="solucoes">Soluções</button><button type="button" data-scroll="metodo">Método</button>
       <button type="button" data-scroll="casos">Transformações</button><button type="button" data-scroll="conhecimento">Conhecimento</button>
+      <button type="button" data-scroll="faq">FAQs</button>
       <button type="button" data-scroll="contacto">Contacto</button>
     </div>
 
@@ -309,6 +311,27 @@
         </div>
       </section>
 
+      <section id="faq" class="section faq-section" aria-labelledby="faq-title">
+        <div class="container faq-layout">
+          <div class="faq-intro" data-reveal>
+            <span class="section-kicker">Perguntas frequentes</span>
+            <h2 id="faq-title">Clareza antes de começarmos.</h2>
+            <p>Respostas diretas sobre a NEXA360, o Diagnóstico 360° e a forma como uma colaboração é preparada.</p>
+          </div>
+          <div class="faq-list" data-reveal>
+            <details><summary>O que é a NEXA360?</summary><p>A NEXA360 é um projeto de consultoria empresarial orientado para diagnóstico, estratégia, processos, CRM, inteligência artificial, crescimento e internacionalização, com atenção à sustentabilidade e ao valor humano.</p></details>
+            <details><summary>A NEXA360 já iniciou oficialmente a atividade?</summary><p>Ainda não. O projeto encontra-se em desenvolvimento e a abertura oficial está prevista para depois de novembro de 2026. Nesta fase, o website é institucional e demonstrativo.</p></details>
+            <details><summary>O que inclui o Diagnóstico 360°?</summary><p>Inclui recolha estruturada de informação, análise das áreas críticas, identificação de riscos e oportunidades, definição de prioridades e um plano de ação com responsáveis, prazos e indicadores. O âmbito final é confirmado por proposta escrita.</p></details>
+            <details><summary>Quanto custa e quanto tempo demora?</summary><p>A edição fundadora apresentada no site prevê uma condição de 650 € acrescida de IVA e entrega em 15 dias úteis, nos termos da proposta aplicável. Outros serviços, calendários e investimentos dependem do âmbito acordado com cada organização.</p></details>
+            <details><summary>Como são definidos pagamento, alterações e cancelamento?</summary><p>Essas condições são apresentadas antes do início do trabalho, numa proposta ou contrato escrito. Nenhum serviço é iniciado sem aceitação expressa do âmbito, entregáveis, calendário, investimento, forma de pagamento e regras de alteração ou cancelamento.</p></details>
+            <details><summary>A NEXA360 garante resultados comerciais?</summary><p>Não. A NEXA360 compromete-se com método, análise e entregáveis acordados, mas resultados dependem também das decisões, recursos, execução e contexto de cada organização.</p></details>
+            <details><summary>A NEXA360 pode apoiar projetos internacionais?</summary><p>Sim, mediante análise prévia do mercado e do enquadramento aplicável. Projetos na União Europeia, no Espaço Económico Europeu ou em países da CPLP exigem proposta própria, com país de destino, moeda, impostos, responsabilidades, regras de dados e parceiros locais definidos quando necessário.</p></details>
+            <details><summary>Os dados introduzidos no formulário são guardados?</summary><p>Não na versão atual. O formulário é uma demonstração: a informação não sai do navegador nem é guardada pela NEXA360. A política será atualizada antes de qualquer recolha real.</p></details>
+            <details><summary>Como posso manifestar interesse ou esclarecer outra questão?</summary><p>Utilize a área de contacto demonstrativa para conhecer a experiência prevista. O canal operacional e os dados comerciais completos serão publicados antes da abertura oficial.</p></details>
+          </div>
+        </div>
+      </section>
+
       <section id="contacto" class="section contact-section">
         <div class="container contact-layout">
           <div class="contact-copy" data-reveal><span class="section-kicker">Contacto e manifestações de interesse</span><h2>Toda grande transformação começa com uma conversa.</h2><p>Conte-nos o desafio, a ambição ou a ideia. A primeira reunião será um espaço de escuta, clareza e descoberta de possibilidades.</p><div class="contact-promise"><svg><use href="#i-check"/></svg><span>Escuta atenta · Confidencialidade · Próximos passos claros</span></div></div>
@@ -327,7 +350,7 @@
 
     <footer class="site-footer">
       <div class="container footer-top"><img src="brand/nexa360-site-light.svg" alt="NEXA360"><p>Estratégia que transforma. Tecnologia com propósito. Crescimento com valor humano.</p><button type="button" data-scroll="inicio" aria-label="Voltar ao topo">↑</button></div>
-      <div class="container footer-bottom"><span>© 2026 NEXA360 — Projeto empresarial em desenvolvimento. Responsável pelo projeto: Mônica Cardoso.</span><div><button type="button" data-legal="privacy">Privacidade</button><button type="button" data-legal="cookies">Cookies</button><button type="button" data-legal="terms">Termos</button></div></div>
+      <div class="container footer-bottom"><span>© 2026 NEXA360 — Projeto empresarial em desenvolvimento. Responsável pelo projeto: Mônica Cardoso.</span><div><button type="button" data-legal="privacy">Privacidade</button><button type="button" data-legal="cookies">Cookies</button><button type="button" data-legal="terms">Termos</button><button type="button" data-legal="international">Internacional</button></div></div>
     </footer>
 
     <div class="modal-backdrop" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="articleModalTitle" hidden>
@@ -351,7 +374,7 @@
         <h3 id="legalModalTitle">Informação legal</h3>
         <div class="legal-modal-body" id="legalModalBody"></div>
         <p class="legal-review-note"><svg><use href="#i-shield"/></svg><span>Texto informativo sujeito a revisão jurídica antes da ativação comercial e da recolha de dados pessoais.</span></p>
-        <div class="legal-sources"><span>Referências oficiais</span><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noopener noreferrer">RGPD · EUR-Lex</a><a href="https://www.cnpd.pt/" target="_blank" rel="noopener noreferrer">CNPD</a></div>
+        <div class="legal-sources"><span>Referências oficiais</span><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noopener noreferrer">RGPD · EUR-Lex</a><a href="https://www.cnpd.pt/" target="_blank" rel="noopener noreferrer">CNPD</a><a href="https://www.consumidor.gov.pt/" target="_blank" rel="noopener noreferrer">Direção-Geral do Consumidor</a></div>
       </article>
     </div>
   </div>
