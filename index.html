@@ -14,6 +14,31 @@
   <link rel="stylesheet" href="styles.css">
   <title>NEXA360 — Evolução com Valor Humano</title>
   <!-- Website institucional v1.4.4 — metodologia de diagnóstico e IA responsável -->
+<style>
+/* Demonstrative case: scoped layout, readable text and native disclosures. */
+.evidence-section{background:#f5f7fa;color:#102d46}
+.evidence-section p{max-width:78ch;line-height:1.75;margin:1rem 0}
+.evidence-section h3{font-size:1.35rem;line-height:1.4;margin:0 0 1rem}
+.evidence-notice{padding:1rem 1.25rem;border-left:4px solid #a47b32;background:#fff6e3;border-radius:0 12px 12px 0}
+.evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:32px 0}
+.evidence-card{padding:clamp(20px,3vw,36px);background:white;border:1px solid #dbe3ea;border-radius:20px;min-width:0}
+.evidence-card blockquote{margin:1.5rem 0;font-size:clamp(1.3rem,2.5vw,1.8rem);line-height:1.45;color:#173d5b}
+.evidence-card dl{margin:0}.evidence-card dl div{padding:12px 0;border-bottom:1px solid #e0e6ec}
+.evidence-card dt{font-weight:800;font-size:1.3rem}.evidence-card dd{margin:6px 0 0;line-height:1.6}
+.evidence-hypothesis{padding:28px 0;margin:12px 0}
+.evidence-detail{border:1px solid #d6dfe8;background:white;border-radius:14px;margin:14px 0;overflow:hidden}
+.evidence-detail summary{padding:22px;cursor:pointer;font-weight:750;line-height:1.5}
+.evidence-detail summary:hover{background:#edf3f8}
+.evidence-table{overflow-x:auto;padding:0 22px 22px}
+.evidence-table table{width:100%;border-collapse:collapse;font-size:.95rem}
+.evidence-table th,.evidence-table td{padding:16px 12px;text-align:left;vertical-align:top;border-bottom:1px solid #dce4eb;line-height:1.65;overflow-wrap:anywhere}
+.evidence-table thead{background:#edf3f8}.evidence-table tbody th{width:34%}
+.evidence-plan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding:0 22px 22px}
+.evidence-plan h4{font-size:1.05rem;line-height:1.5}
+.evidence-section .button{white-space:normal;text-align:center;line-height:1.5}
+.evidence-founder{margin-top:24px;padding-top:24px;border-top:1px solid #dbe3ea}
+@media(max-width:760px){.evidence-grid,.evidence-plan{grid-template-columns:1fr}.evidence-table th,.evidence-table td{padding:12px 6px}.evidence-section .container{width:calc(100% - 32px)}}
+</style>
 </head>
 <body>
   <svg class="svg-sprite" aria-hidden="true">
@@ -158,7 +183,7 @@
           <div class="about-content" data-reveal>
             <p>A NEXA360 é um projeto empresarial em fase de preparação, desenvolvido sob a responsabilidade de Mônica Cardoso. A abertura oficial da atividade está prevista para depois de novembro de 2026.</p>
             <p>Mais do que consultoria, a NEXA360 foi concebida para ser uma parceira de evolução. A proposta não se limita a recomendações: integra estratégias, ferramentas, processos e oportunidades para acompanhar a evolução de cada organização.</p>
-            <div class="manifesto-card"><div class="quote-mark">“</div><p>Acreditamos que empresas extraordinárias são construídas por pessoas valorizadas. Por isso, cuidamos das empresas sem nunca deixar de cuidar das pessoas.</p><span>NEXA360 · FILOSOFIA</span></div>
+            <div class="evidence-founder"><h3>Mônica Cardoso · Responsável pelo projeto</h3><p>A experiência em educação e comunicação e a formação em curso em Comércio Internacional orientam a abordagem de Mônica Cardoso: escutar, organizar informação e tornar decisões compreensíveis para quem as vai executar.</p></div><div class="manifesto-card"><div class="quote-mark">“</div><p>Acreditamos que empresas extraordinárias são construídas por pessoas valorizadas. Por isso, cuidamos das empresas sem nunca deixar de cuidar das pessoas.</p><span>NEXA360 · FILOSOFIA</span></div>
           </div>
         </div>
         <div class="container values-experience" data-reveal>
@@ -284,11 +309,23 @@
             <article class="case-card" data-reveal><div class="case-top"><span>Projeto estratégico</span></div><div class="case-graphic"><svg><use href="#i-globe"/></svg></div><div class="case-content"><small>Comércio Internacional</small><h3>Internacionalização de PME</h3><p>Modelo integrado de seleção de mercados, entrada internacional, riscos, finanças e KPIs.</p><button class="case-action" type="button" data-scroll="contacto" data-select-challenge="Comércio internacional">Conversar sobre internacionalização <svg><use href="#i-arrow"/></svg></button></div></article>
             <article class="case-card" data-reveal><div class="case-top"><span>Metodologia própria</span></div><div class="case-graphic"><svg><use href="#i-target"/></svg></div><div class="case-content"><small>Estratégia</small><h3>Diagnóstico Empresarial 360°</h3><p>Leitura multidimensional da empresa para transformar complexidade em prioridades claras.</p><button class="case-action" type="button" data-scroll="diagnostico">Ver Diagnóstico 360° <svg><use href="#i-arrow"/></svg></button></div></article>
           </div>
-          <p class="case-note" data-reveal>* Nesta fase, apresentamos projetos próprios, metodologias e demonstrações identificados pela sua natureza. Os primeiros resultados de clientes serão publicados apenas com autorização.</p>
+          <p><a class="button button-primary" href="#na-pratica">Ver o método num caso fictício</a></p><p class="case-note" data-reveal>* Nesta fase, apresentamos projetos próprios, metodologias e demonstrações identificados pela sua natureza. Os primeiros resultados de clientes serão publicados apenas com autorização.</p>
         </div>
       </section>
 
-      <section id="conhecimento" class="section section-knowledge">
+      <section id="na-pratica" class="section evidence-section" aria-labelledby="evidence-title"><div class="container">
+<div class="section-heading wide"><span class="section-kicker">Na prática</span><h2 id="evidence-title">Antes de procurar mais clientes, acompanhe melhor as oportunidades.</h2><p>Um exemplo do raciocínio NEXA360: compreender, diagnosticar, priorizar, implementar, medir e evoluir.</p></div>
+<p class="evidence-notice">Caso inteiramente fictício · Sem resultados de clientes ou promessas de desempenho.</p>
+<div class="evidence-grid"><article class="evidence-card"><h3>01 · A pergunta inicial</h3><blockquote>«Precisamos de mais clientes. Devemos investir em publicidade?»</blockquote><p>Uma pequena empresa recebe pedidos por email, telefone e WhatsApp. A equipa trabalha muito, mas não tem uma visão comum das propostas em curso.</p></article><article class="evidence-card"><h3>02 · Evidências do exemplo</h3><dl><div><dt>40 propostas</dt><dd>enviadas num mês fictício</dd></div><div><dt>15 sem próxima ação</dt><dd>37,5% das propostas sem seguimento planeado (15 ÷ 40)</dd></div><div><dt>10 sem responsável</dt><dd>25% sem responsabilidade atribuída (10 ÷ 40)</dd></div></dl><p>Os grupos podem sobrepor-se; as percentagens não devem ser somadas. Estes dados não demonstram vendas perdidas nem a causa de uma eventual quebra comercial.</p></article></div>
+<article class="evidence-hypothesis"><h3>03 · Hipótese a validar</h3><p>A falta de acompanhamento pode estar a limitar o aproveitamento das oportunidades. Antes de aumentar o investimento, importa cruzar registos, ouvir a equipa e verificar os motivos de perda.</p></article>
+<h3>Prévia dos entregáveis</h3><p>Excertos ilustrativos. O âmbito, os dados e os entregáveis finais são definidos na proposta de cada projeto.</p>
+<details class="evidence-detail"><summary>Abrir a matriz de prioridades</summary><div class="evidence-table"><table><thead><tr><th scope="col">Ação</th><th scope="col">Critérios e decisão</th></tr></thead><tbody><tr><th scope="row">Atribuir responsável e próxima ação às propostas</th><td>Agir agora · Impacto esperado elevado; urgência elevada; esforço baixo; risco baixo. Validar disponibilidade da equipa.</td></tr><tr><th scope="row">Uniformizar etapas e motivos de perda</th><td>Planear · Impacto esperado elevado; urgência média; esforço médio; risco de adoção. Construir com a equipa.</td></tr><tr><th scope="row">Automatizar lembretes</th><td>Desenvolver · Após validar o processo; esforço e risco dependem da ferramenta e das permissões.</td></tr><tr><th scope="row">Aumentar publicidade</th><td>Monitorizar · Decidir após analisar capacidade de resposta, qualidade das oportunidades e conversão.</td></tr></tbody></table></div></details>
+<details class="evidence-detail"><summary>Abrir o plano de 30–60–90 dias</summary><div class="evidence-plan"><article><h4>Até 30 dias · Organizar</h4><p>Responsável proposto: coordenação comercial. Consolidar registos, definir responsáveis e medir a situação inicial.</p></article><article><h4>Até 60 dias · Experimentar</h4><p>Responsável proposto: equipa comercial, com apoio técnico quando necessário. Testar o processo num grupo de oportunidades e rever dificuldades semanalmente.</p></article><article><h4>Até 90 dias · Avaliar</h4><p>Responsável proposto: direção e coordenação comercial. Comparar indicadores, recolher feedback e decidir o que manter, ajustar ou ampliar.</p></article></div></details>
+<details class="evidence-detail"><summary>Abrir os indicadores de acompanhamento</summary><div class="evidence-table"><table><thead><tr><th scope="col">Indicador</th><th scope="col">Como medir</th></tr></thead><tbody><tr><th scope="row">Cobertura de acompanhamento</th><td>Propostas com próxima ação ÷ propostas analisadas × 100. Neste exemplo: 25 ÷ 40 = 62,5%.</td></tr><tr><th scope="row">Tempo de primeira resposta</th><td>Mediana das horas úteis entre entrada do pedido e primeira resposta. Requer datas e horários consistentes.</td></tr><tr><th scope="row">Conversão de oportunidades encerradas</th><td>Ganhas ÷ (ganhas + perdidas) × 100, no período definido. Acompanhar também oportunidades ainda abertas. Sem base inicial, não fixamos uma promessa de melhoria.</td></tr></tbody></table></div></details>
+<article class="evidence-hypothesis"><h3>CRM com propósito</h3><p>Explore a demonstração com três perguntas: onde encontro o cliente, como acompanho os contactos e como identifico a próxima decisão comercial?</p><p>A preparação de uma versão operacional exige definir acessos por função, cópias de segurança, testes de recuperação e histórico de alterações. São requisitos a implementar e validar; não funcionalidades de segurança certificadas nesta demonstração pública.</p><a class="button button-primary" href="https://monicacardoso01.github.io/nexa360-academic-demo/" target="_blank" rel="noopener noreferrer">Explorar o CRM com dados fictícios</a></article>
+<a class="button button-primary" href="#diagnostico">Conhecer o âmbito do Diagnóstico 360°</a>
+</div></section>
+<section id="conhecimento" class="section section-knowledge">
         <div class="photo-atmosphere photo-knowledge" aria-hidden="true"></div>
         <div class="container knowledge-layout">
           <div class="knowledge-intro" data-reveal><span class="section-kicker">Centro de Conhecimento</span><h2 id="knowledge-title">Conhecimento que não fica no papel. Torna-se decisão.</h2><div class="knowledge-orbit"><svg><use href="#i-bulb"/></svg><span></span></div></div>
